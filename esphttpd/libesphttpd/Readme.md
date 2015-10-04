@@ -3,8 +3,10 @@
 If you are using YUI compression you have first to install it with "brew install yuicompressor"
 
 change the esphttpdconfig.mk in esphttpd in the yui part to:
+```
 COMPRESS_W_YUI ?= yes
 YUI-COMPRESSOR ?= /usr/local/Cellar/yuicompressor/2.4.8/bin/yuicompressor
+```
 
 change the webpages.espfs part in the Makefile in the libesphttpd Folder to:
 ```
@@ -25,6 +27,6 @@ endif
 ```
 
 ##issues
-the du command does not work with -b -s - had to remove this
-the find command does not work with no info - had to change it to find . | instead of find |
-the $(THISDIR) command does not work used $(PWD)
+- the du command does not work with -b -s - had to remove this
+- the find command does not work with no info - had to change it to find . | instead of find |
+- the $(THISDIR) command does not work used $(PWD)
